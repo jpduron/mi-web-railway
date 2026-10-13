@@ -1,7 +1,4 @@
 FROM nginx:alpine
 
-# Borramos la página web de bienvenida que trae Nginx por defecto
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copiamos tus archivos HTML y CSS a la ruta correcta de Nginx
-COPY . /usr/share/nginx/html
+# Copiamos todo el contenido actual al directorio HTML oficial de Nginx
+COPY . /usr/share/nginx/html/
